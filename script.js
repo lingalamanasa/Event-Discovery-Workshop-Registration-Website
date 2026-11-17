@@ -860,23 +860,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Hamburger Menu
+  // Hamburger Menu & Mobile Drawer Auto-Provisioning (All Pages)
   const hamburger = document.getElementById('hamburger-btn');
-  const drawer = document.getElementById('mobile-drawer');
-  const backdrop = document.getElementById('mobile-backdrop');
-  const closeDrawer = document.getElementById('close-drawer-btn');
+  if (hamburger) {
+    let drawer = document.getElementById('mobile-drawer');
+    let backdrop = document.getElementById('mobile-backdrop');
 
-  if (hamburger && drawer && backdrop) {
-    hamburger.addEventListener('click', () => {
+    // Auto-create drawer and backdrop if absent on any subpage
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'mobile-nav-backdrop';
+      backdrop.id = 'mobile-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    if (!drawer) {
+      drawer = document.createElement('aside');
+      drawer.className = 'mobile-drawer';
+      drawer.id = 'mobile-drawer';
+      const path = window.location.pathname;
+      const isHome = path.endsWith('index.html') || path === '/' || path.endsWith('/');
+      const isEvents = path.includes('events.html');
+      const isReg = path.includes('registrations.html');
+      drawer.innerHTML = `
+        <div class="mobile-drawer-header">
+          <a href="index.html" class="nav-logo">
+            <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img" style="height: 32px;">
+          </a>
+          <button class="close-drawer-btn" id="close-drawer-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-menu">
+          <li class="mobile-nav-item"><a href="index.html" class="${isHome ? 'active' : ''}"><span>Home</span> →</a></li>
+          <li class="mobile-nav-item"><a href="events.html" class="${isEvents ? 'active' : ''}"><span>Explore Events</span> →</a></li>
+          <li class="mobile-nav-item"><a href="registrations.html" class="${isReg ? 'active' : ''}"><span>My Registrations</span> (<span class="reg-counter-badge">0</span>)</a></li>
+        </ul>
+        <div style="margin-top:auto; padding-top:20px;">
+          <a href="events.html" class="btn btn-primary" style="width:100%;">Browse All Events</a>
+        </div>
+      `;
+      document.body.appendChild(drawer);
+      updateBadgeCount();
+    }
+
+    const showMenu = (e) => {
+      if (e) e.preventDefault();
       drawer.classList.add('open');
       backdrop.classList.add('open');
-    });
-    const hide = () => {
+      document.body.style.overflow = 'hidden';
+    };
+
+    const hideMenu = () => {
       drawer.classList.remove('open');
       backdrop.classList.remove('open');
+      document.body.style.overflow = '';
     };
-    if (closeDrawer) closeDrawer.addEventListener('click', hide);
-    backdrop.addEventListener('click', hide);
+
+    hamburger.addEventListener('click', showMenu);
+    hamburger.addEventListener('touchstart', showMenu, { passive: false });
+
+    backdrop.addEventListener('click', hideMenu);
+    backdrop.addEventListener('touchstart', hideMenu, { passive: true });
+
+    drawer.addEventListener('click', (e) => {
+      if (e.target.closest('#close-drawer-btn') || e.target.closest('.close-drawer-btn')) {
+        hideMenu();
+      }
+      if (e.target.closest('.mobile-nav-item a') || e.target.closest('a')) {
+        hideMenu();
+      }
+    });
   }
 
   // Quick Search trigger

@@ -44,6 +44,41 @@
     </div>
   </header>
 
+  <!-- MOBILE DRAWER & BACKDROP -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="nav-logo">
+        <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img" style="height: 32px;">
+      </a>
+      <button class="close-drawer-btn" id="close-drawer-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li class="mobile-nav-item"><a href="index.html"><span>Home</span> →</a></li>
+      <li class="mobile-nav-item"><a href="events.html" class="active"><span>Explore Events</span> →</a></li>
+      <li class="mobile-nav-item"><a href="registrations.html"><span>My Registrations</span> (<span class="reg-counter-badge">0</span>)</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:20px;">
+      <a href="events.html" class="btn btn-primary" style="width:100%;">Browse All Events</a>
+    </div>
+  </aside>
+
+  <!-- SEARCH MODAL -->
+  <div class="search-modal" id="search-modal">
+    <div class="search-modal-card">
+      <div class="search-modal-header">
+        <div style="display:flex; align-items:center; gap:10px; flex:1;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="search-modal-input" placeholder="Search summits, topics, mentors..." class="search-modal-input">
+        </div>
+        <button id="close-search-btn" class="close-modal-btn">&times;</button>
+      </div>
+      <div class="search-results-list" id="search-modal-results">
+        <p style="text-align:center; padding: 24px; color: var(--text-secondary);">Start typing to find summits, bootcamps, or speakers...</p>
+      </div>
+    </div>
+  </div>
+
   <main id="event-detail-container">
     <!-- Rendered Dynamically by JS -->
   </main>
