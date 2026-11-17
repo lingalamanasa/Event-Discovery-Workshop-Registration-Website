@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Discover. Connect. Experience.</title>
+  <link rel="icon" type="image/png" href="./assets/stackly-logo-Dxh7I0h3.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- AOS Scroll Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Stylesheet -->
+  <!-- Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C7q9OHCH.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       PRELOADER ANIMATION WITH LIVE PERCENTAGE COUNTER (RECIPE DISCOVERY SUITE)
+       ========================================== -->
+  <div class="site-preloader" id="site-preloader" aria-label="Loading Stackly">
+    <div class="preloader-content">
+      <div class="preloader-spinner-wrap">
+        <div class="preloader-ring"></div>
+        <div class="preloader-icon-box">
+          <img src="./assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" style="height: 32px; object-fit: contain;">
+        </div>
+      </div>
+      <div class="preloader-brand">
+        Stackly<span>.</span>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-counter" id="preloader-counter">0%</div>
+      <div class="preloader-subtext">Curating Premier Experiences & Workshops...</div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly Home">
+        <img src="./assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Links -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="events.html" class="nav-link">Explore Events</a></li>
+          <li><a href="registrations.html" class="nav-link">My Registrations</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="nav-search-btn" aria-label="Search events" title="Search events">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+
+        <a href="registrations.html" class="nav-registrations-pill" title="My Bookings">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="reg-text">My Bookings</span>
+          <span class="reg-counter-badge">0</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="nav-logo">
+        <img src="./assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" class="brand-logo-img" style="height: 30px;">
+      </a>
+      <button id="close-drawer-btn" style="background:none; border:none; cursor:pointer; color:var(--text-secondary); font-size: 1.5rem;">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li class="mobile-nav-item"><a href="index.html" class="active"><span>Home</span> →</a></li>
+      <li class="mobile-nav-item"><a href="events.html"><span>Explore Events</span> →</a></li>
+      <li class="mobile-nav-item"><a href="registrations.html"><span>My Registrations</span> (<span class="reg-counter-badge">0</span>)</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:20px;">
+      <a href="events.html" class="btn btn-primary" style="width:100%;">Browse All Events</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-glow-orb-1"></div>
+      <div class="hero-glow-orb-2"></div>
+      <div class="container" style="position:relative; z-index:2;">
+        <div class="hero-grid">
+          <div class="hero-content" data-aos="fade-right" data-aos-duration="900">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span>Discover Your Next Experience</span>
+            </div>
+
+            <h1 class="hero-heading">
+              Find Your Next Experience. <em>Learn Something New</em>, Meet Amazing People.
+            </h1>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+              Explore inspiring events, hands-on workshops, and unforgettable experiences. Find your community and book your next adventure.
+            </p>
+
+            <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="350" data-aos-duration="800">
+              <a href="events.html" class="btn btn-primary btn-lg">
+                <span>Explore Events</span>
+                <span>→</span>
+              </a>
+              <a href="#upcoming-events" class="btn btn-outline btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Discover Upcoming Events</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-wrapper" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000">
+            <div class="floating-badge-top">
+              <span class="floating-date-month">Dec</span>
+              <span class="floating-date-day">05</span>
+            </div>
+
+            <div class="floating-attendees-badge">
+              <div class="attendee-avatar-stack">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Attendee">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Attendee">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt="Attendee">
+              </div>
+              <div class="attendees-text">
+                <span style="color:var(--secondary);">+1.4k</span> Attending
+              </div>
+            </div>
+
+            <div class="hero-main-card">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="Conference Summit" class="hero-main-img">
+              <div class="hero-img-gradient"></div>
+
+              <div class="floating-card-info">
+                <div class="floating-info-text">
+                  <h4 style="color:var(--primary); margin-bottom:2px;">Global AI & ML Summit 2026</h4>
+                  <p style="font-size:0.8rem; color:var(--text-secondary);">San Francisco, CA & Live Stream</p>
+                </div>
+                <a href="event-details.html?id=evt-101" class="btn btn-accent btn-sm">Book Now</a>
+              </div>
+            </div>
+
+            <!-- Floating Live Workshop Pill with Real Photo -->
+            <div class="floating-live-workshop">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=160&q=80" alt="Live Workshop" class="floating-live-img">
+              <div>
+                <div class="live-pill"><span class="live-dot"></span> LIVE WORKSHOP</div>
+                <div class="floating-card-mini-title">AI Design Sprint</div>
+                <div class="floating-card-mini-sub">420 Attendees in room</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FIGMA HERO SEARCH DOCK -->
+        <div class="hero-search-dock">
+          <div class="dock-field">
+            <div class="dock-label">Looking For</div>
+            <div class="dock-input-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="hero-dock-keyword" placeholder="Search summits, topics, mentors..." class="dock-input">
+            </div>
+          </div>
+
+          <div class="dock-divider"></div>
+
+          <div class="dock-field">
+            <div class="dock-label">Category Track</div>
+            <div class="dock-input-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <select id="hero-dock-category" class="dock-select">
+                <option value="">All Tracks</option>
+                <option value="Technology">Technology & AI</option>
+                <option value="Design">UI/UX & Design</option>
+                <option value="Business">Venture & Business</option>
+                <option value="Education">Masterclasses</option>
+                <option value="Marketing">Growth & Marketing</option>
+                <option value="Photography">Photography</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="dock-divider"></div>
+
+          <div class="dock-field">
+            <div class="dock-label">Format / Mode</div>
+            <div class="dock-input-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <select id="hero-dock-mode" class="dock-select">
+                <option value="">Any Format</option>
+                <option value="In-Person">In-Person Only</option>
+                <option value="Online">Virtual / Stream</option>
+                <option value="Hybrid">Hybrid Experience</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="dock-action">
+            <button class="btn btn-primary btn-lg dock-btn" id="hero-dock-btn">
+              <span>Find Experiences</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- FIGMA TRUSTED BRANDS STRIP -->
+        <div class="trusted-brands-strip">
+          <span class="trusted-label">Trusted by engineers & designers from</span>
+          <div class="trusted-logos-row">
+            <span class="trusted-brand-logo">GOOGLE</span>
+            <span class="trusted-brand-logo">FIGMA</span>
+            <span class="trusted-brand-logo">STRIPE</span>
+            <span class="trusted-brand-logo">OPENAI</span>
+            <span class="trusted-brand-logo">APPLE</span>
+            <span class="trusted-brand-logo">SPOTIFY</span>
+            <span class="trusted-brand-logo">MICROSOFT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFINITE LIVE MARQUEE STRIP -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>✦ 45,000+ TECH LEADERS & CREATORS</span>
+        <span class="bullet">•</span>
+        <span class="highlight">⚡ LIVE SILICON VALLEY AI SUMMIT</span>
+        <span class="bullet">•</span>
+        <span>🎟️ INSTANT DIGITAL TICKET PASSES</span>
+        <span class="bullet">•</span>
+        <span class="highlight">✦ FIGMA DESIGN CLINICS & CODE LABS</span>
+        <span class="bullet">•</span>
+        <span>🔥 100% VERIFIED KEYNOTE PRACTITIONERS</span>
+        <span class="bullet">•</span>
+        <span class="highlight">✦ ZERO-FEE EVENT DISCOVERY</span>
+        <span class="bullet">•</span>
+        <span>✦ 45,000+ TECH LEADERS & CREATORS</span>
+        <span class="bullet">•</span>
+        <span class="highlight">⚡ LIVE SILICON VALLEY AI SUMMIT</span>
+        <span class="bullet">•</span>
+        <span>🎟️ INSTANT DIGITAL TICKET PASSES</span>
+        <span class="bullet">•</span>
+        <span class="highlight">✦ FIGMA DESIGN CLINICS & CODE LABS</span>
+        <span class="bullet">•</span>
+        <span>🔥 100% VERIFIED KEYNOTE PRACTITIONERS</span>
+        <span class="bullet">•</span>
+        <span class="highlight">✦ ZERO-FEE EVENT DISCOVERY</span>
+      </div>
+    </div>
+
+    <!-- PLATFORM STATS -->
+    <section class="stats-section" data-aos="fade-up" data-aos-duration="800">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-num-display">120+</div>
+            <div class="stat-label-text">Active Summits & Workshops</div>
+            <div class="stat-sub-text">Across 14 global tech hubs</div>
+          </div>
+          <div class="stat-item-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-num-display">45k+</div>
+            <div class="stat-label-text">Registered Attendees</div>
+            <div class="stat-sub-text">From 60+ countries worldwide</div>
+          </div>
+          <div class="stat-item-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-num-display">350+</div>
+            <div class="stat-label-text">Industry Leaders & Mentors</div>
+            <div class="stat-sub-text">Vetted top 1% practitioners</div>
+          </div>
+          <div class="stat-item-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="stat-num-display">99.4%</div>
+            <div class="stat-label-text">Attendee Satisfaction</div>
+            <div class="stat-sub-text">Based on 18k+ post-event reviews</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED EVENT (FIGMA BENTO GRID) -->
+    <section class="featured-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">✦ Spotlight of the Month</span>
+          <h2 class="section-title">Featured Experience Bento</h2>
+          <p class="section-subtitle">An exceptional gathering of visionary minds, groundbreaking workshops, and unmatched networking.</p>
+        </div>
+
+        <div class="bento-grid-wrapper" data-aos="fade-up" data-aos-delay="150" data-aos-duration="900">
+          <!-- Main Bento Card -->
+          <div class="bento-card bento-card-main">
+            <div class="bento-main-media">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80" alt="AI Summit" class="bento-main-img">
+              <div class="bento-main-overlay"></div>
+              <div class="bento-badge-floating">
+                <span class="featured-star-pill">★ Featured Summit</span>
+                <span class="badge-category badge-Technology">Technology</span>
+                <span class="mode-tag">Hybrid</span>
+              </div>
+            </div>
+            <div class="bento-main-body">
+              <h3 style="font-size:1.6rem; color:var(--primary); margin-bottom:10px; font-weight:800;">Global AI & Next-Gen Machine Learning Summit 2026</h3>
+              <p style="color:var(--text-secondary); line-height:1.6; margin-bottom:20px;">Join 1,000+ engineers, researchers, and tech pioneers to dive deep into multimodal LLMs, agentic workflows, and future computing paradigms.</p>
+              
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:20px; border-top:1px solid var(--border-color); flex-wrap:wrap; gap:16px;">
+                <div style="display:flex; align-items:baseline; gap:8px;">
+                  <span style="font-size:1.6rem; font-weight:800; color:var(--primary);">$149</span>
+                  <span style="font-size:0.85rem; color:var(--text-secondary);">/ Early Bird Pass</span>
+                </div>
+                <a href="event-details.html?id=evt-101" class="btn btn-accent btn-lg">
+                  <span>Explore Summit Details</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Live Countdown -->
+          <div class="bento-card bento-card-countdown">
+            <div style="display:flex; align-items:center; gap:8px; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent);">
+              <span class="live-dot" style="background:var(--accent); box-shadow:0 0 8px var(--accent);"></span>
+              <span>Summit Starts In</span>
+            </div>
+            <div class="bento-countdown-display">
+              <div class="countdown-box">
+                <div class="countdown-num">18</div>
+                <div class="countdown-lbl">Days</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-num">14</div>
+                <div class="countdown-lbl">Hours</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-num">32</div>
+                <div class="countdown-lbl">Mins</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-num">08</div>
+                <div class="countdown-lbl">Secs</div>
+              </div>
+            </div>
+            <div style="font-size:0.84rem; color:#B5B5D1; display:flex; justify-content:space-between;">
+              <span>Location: San Francisco & Global Stream</span>
+              <span style="color:#FFF; font-weight:700;">42 Seats Left</span>
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Keynote Mentor Spotlight -->
+          <div class="bento-card bento-card-mentor">
+            <div class="speaker-avatar-wrap" style="width:68px; height:68px;">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Dr. Elena Vance" class="speaker-avatar-img">
+            </div>
+            <div style="flex:1;">
+              <span class="speaker-badge-pill" style="margin-bottom:2px;">Keynote Lead</span>
+              <h4 style="font-size:1.1rem; color:var(--primary); font-weight:700; margin-bottom:2px;">Dr. Elena Vance</h4>
+              <div style="font-size:0.82rem; color:var(--text-secondary);">Chief AI Scientist • <strong>DeepNeural Labs</strong></div>
+              <div style="font-size:0.78rem; color:var(--secondary); font-weight:600; margin-top:4px;">Session: Autonomous Agent Swarms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING EVENTS -->
+    <section class="section" id="upcoming-events">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">✦ Mark Your Calendar</span>
+          <h2 class="section-title">Upcoming Events & Workshops</h2>
+          <p class="section-subtitle">Choose from interactive bootcamps, executive summits, creative clinics, and networking retreats.</p>
+        </div>
+
+        <!-- FIGMA QUICK FILTER TABS -->
+        <div class="figma-filter-tabs" id="figma-quick-tabs" data-aos="fade-up" data-aos-delay="100">
+          <button class="figma-tab-btn active" data-filter="all">All Experiences</button>
+          <button class="figma-tab-btn" data-filter="trending">🔥 Trending</button>
+          <button class="figma-tab-btn" data-filter="free">🎟️ Free Workshops</button>
+          <button class="figma-tab-btn" data-filter="hybrid">⚡ Hybrid / Global</button>
+          <button class="figma-tab-btn" data-filter="tech">💻 AI & Tech</button>
+        </div>
+
+        <div class="events-grid" id="upcoming-events-grid" data-aos="fade-up" data-aos-duration="800">
+          <!-- Dynamically Rendered by script.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;" data-aos="fade-up" data-aos-duration="600">
+          <a href="events.html" class="btn btn-primary btn-lg">
+            <span>See All Events</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" style="background-color: #FFFFFF;">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">✦ Curated Tracks</span>
+          <h2 class="section-title">Explore Event Categories</h2>
+          <p class="section-subtitle">Filter by your area of interest and uncover high-impact learning opportunities.</p>
+        </div>
+
+        <div class="categories-grid" id="categories-grid" data-aos="fade-up" data-aos-duration="900">
+          <!-- Dynamically Rendered -->
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE EVENTORA -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">✦ The Eventora Advantage</span>
+          <h2 class="section-title">Why Choose Eventora?</h2>
+          <p class="section-subtitle">We design transformative event discovery experiences with zero friction and guaranteed value.</p>
+        </div>
+
+        <div class="features-grid" data-aos="fade-up" data-aos-duration="900">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="feature-card-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Discover Amazing Events" class="feature-card-thumb" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <h3 class="feature-title">Discover Amazing Events</h3>
+              <p class="feature-description">Hand-curated conferences, masterclasses, and networking sessions tailored to your professional and creative ambitions.</p>
+            </div>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="feature-card-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80" alt="Learn from Industry Experts" class="feature-card-thumb" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <h3 class="feature-title">Learn from Industry Experts</h3>
+              <p class="feature-description">Gain direct access to world-class founders, principal engineers, designers, and authors who share proven trade blueprints.</p>
+            </div>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="190">
+            <div class="feature-card-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Connect with Professionals" class="feature-card-thumb" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="feature-title">Connect with Professionals</h3>
+              <p class="feature-description">Build genuine connections with high-caliber peers, future collaborators, investors, and mentors across high-growth domains.</p>
+            </div>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="260">
+            <div class="feature-card-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Easy Event Registration" class="feature-card-thumb" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3 class="feature-title">Easy Event Registration</h3>
+              <p class="feature-description">Instant, seamless ticket confirmation in seconds with real-time seat tracking and downloadable digital event credentials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOMENTS PHOTO GALLERY -->
+    <section class="section" style="background-color: var(--bg-main);">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">✦ Experience the Energy</span>
+          <h2 class="section-title">Capturing Unforgettable Moments</h2>
+          <p class="section-subtitle">Take a glimpse inside previous summits, creative hackathons, and transformative masterclasses.</p>
+        </div>
+
+        <div class="moments-grid" id="moments-gallery-grid" data-aos="fade-up" data-aos-duration="900">
+          <!-- Rendered by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED KEYNOTE SPEAKERS -->
+    <section class="section" style="background-color: #FFFFFF;">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">✦ World-Class Mentors</span>
+          <h2 class="section-title">Learn from Renowned Industry Leaders</h2>
+          <p class="section-subtitle">Direct access to visionary founders, principal engineers, and design heads from top companies.</p>
+        </div>
+
+        <div class="speakers-grid" id="speakers-showcase-grid" data-aos="fade-up" data-aos-duration="900">
+          <!-- Rendered by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <span class="section-badge">★ Community Stories</span>
+          <h2 class="section-title">Loved by Innovators Worldwide</h2>
+          <p class="section-subtitle">Hear directly from attendees who accelerated their careers and scaled products through Eventora.</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonials-grid" data-aos="fade-up" data-aos-duration="900">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div class="testimonial-nav-controls">
+          <button class="testimonial-nav-btn" id="prev-test-btn" aria-label="Previous">←</button>
+          <div class="testimonial-dots" id="testimonial-dots"></div>
+          <button class="testimonial-nav-btn" id="next-test-btn" aria-label="Next">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box" data-aos="zoom-in" data-aos-duration="800">
+          <div class="cta-badge">✦ Your Next Breakthrough Awaits</div>
+          <h2 class="cta-title">Ready to Learn, Connect, and Grow Your Network?</h2>
+          <p class="cta-subtitle">Join thousands of enthusiastic creators, developers, designers, and entrepreneurs discovering remarkable experiences on Eventora.</p>
+          <div class="cta-buttons">
+            <a href="events.html" class="btn btn-accent btn-lg">Browse All Events →</a>
+            <a href="registrations.html" class="btn btn-outline btn-lg" style="color:#FFF; border-color:rgba(255,255,255,0.3);">View My Bookings</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" class="brand-logo-img-footer">
+          </a>
+          <p>Your premier gateway to world-class conferences, hands-on workshops, masterclasses, and executive networking sessions.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="footer-social-link" aria-label="GitHub">Git</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Explore Events</a></li>
+            <li><a href="registrations.html">My Registrations</a></li>
+            <li><a href="events.html?mode=Online">Virtual Workshops</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="events.html?category=Technology">Technology & AI</a></li>
+            <li><a href="events.html?category=Design">UI/UX & Design</a></li>
+            <li><a href="events.html?category=Business">Business & Capital</a></li>
+            <li><a href="events.html?category=Education">Developer Bootcamp</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Stay Inspired</h4>
+          <p style="color:#A2A2BE; font-size:0.92rem; margin-bottom:14px;">Subscribe for weekly curated event drops and early-bird seats.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to Eventora VIP drops!', 'success'); this.reset();">
+            <input type="email" placeholder="Your email..." class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved. Built for curious minds.</p>
+        <div style="display:flex; gap:20px;">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Security</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH MODAL -->
+  <div class="modal-backdrop" id="search-modal">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-search-btn">&times;</button>
+      <div class="search-modal-header">
+        <div class="search-input-wrapper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search by topic, speaker, category, or city..." class="search-input-field" id="search-modal-input">
+        </div>
+      </div>
+      <div class="search-results-list" id="search-modal-results">
+        <p style="text-align:center; padding: 24px; color: var(--text-secondary);">Start typing to find summits, bootcamps, or speakers...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGISTRATION MODAL -->
+  <div class="modal-backdrop" id="registration-modal">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-reg-modal">&times;</button>
+      <div class="reg-modal-header">
+        <span class="badge-category" id="reg-event-badge">Technology</span>
+        <h2 class="reg-modal-title">Event Registration</h2>
+        <div class="reg-modal-event-name" id="reg-event-name-display">Event Title</div>
+      </div>
+
+      <form class="reg-form" id="reg-form">
+        <input type="hidden" id="reg-event-id">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="reg-fullname">Full Name <span class="required">*</span></label>
+            <input type="text" id="reg-fullname" class="form-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Work / Personal Email <span class="required">*</span></label>
+            <input type="email" id="reg-email" class="form-input" placeholder="alex@domain.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="reg-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="reg-phone" class="form-input" placeholder="+1 (555) 019-2834" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-seats">Number of Seats <span class="required">*</span></label>
+            <select id="reg-seats" class="form-select"></select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-role">Professional Background</label>
+          <select id="reg-role" class="form-select">
+            <option value="Software Engineer / Architect">Software Engineer / Architect</option>
+            <option value="UI/UX / Product Designer">UI/UX / Product Designer</option>
+            <option value="Startup Founder / Executive">Startup Founder / Executive</option>
+            <option value="Product / Project Manager">Product / Project Manager</option>
+            <option value="Growth & Marketing">Growth & Marketing Specialist</option>
+            <option value="Student / Researcher">Student / Researcher</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="order-summary-box">
+          <div>
+            <div style="font-size:0.85rem; color:var(--text-secondary);">Total Investment</div>
+            <div style="font-size:0.9rem; font-weight:600; color:var(--primary);" id="order-summary-detail">1 Seat</div>
+          </div>
+          <div class="order-summary-price" id="order-summary-price">$0</div>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-lg" style="width:100%; margin-top:6px;">
+          Complete Registration
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TICKET PASS MODAL -->
+  <div class="modal-backdrop" id="ticket-modal">
+    <div class="modal-box ticket-modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-ticket-modal" style="background:#FFF;">&times;</button>
+      <div class="ticket-pass" id="printable-ticket">
+        <div class="ticket-header">
+          <div class="ticket-brand-row">
+            <div style="font-weight:800; letter-spacing:0.05em; font-size:0.9rem;">STACKLY / EVENTORA PASS</div>
+            <span class="ticket-id-badge" id="ticket-modal-id">EVT-PASS-000000</span>
+          </div>
+          <h3 class="ticket-event-title" id="ticket-modal-title">Event Title</h3>
+          <div class="ticket-event-tag" id="ticket-modal-tag">Technology • Hybrid Edition</div>
+        </div>
+
+        <div class="ticket-divider">
+          <div class="ticket-dashed-line"></div>
+        </div>
+
+        <div class="ticket-body">
+          <div class="ticket-info-grid">
+            <div>
+              <div class="ticket-label">Attendee Name</div>
+              <div class="ticket-val" id="ticket-modal-name">Attendee Name</div>
+            </div>
+            <div>
+              <div class="ticket-label">Role</div>
+              <div class="ticket-val" id="ticket-modal-role">Role</div>
+            </div>
+            <div>
+              <div class="ticket-label">Date & Time</div>
+              <div class="ticket-val" id="ticket-modal-date">Date</div>
+              <div style="font-size:0.82rem; color:var(--text-secondary);" id="ticket-modal-time">Time</div>
+            </div>
+            <div>
+              <div class="ticket-label">Seats Booked</div>
+              <div class="ticket-val" id="ticket-modal-seats">1 Attendee</div>
+            </div>
+            <div style="grid-column: span 2;">
+              <div class="ticket-label">Location</div>
+              <div class="ticket-val" id="ticket-modal-location">Location</div>
+              <div style="font-size:0.8rem; color:var(--text-secondary); margin-top:2px;" id="ticket-modal-address">Venue Address</div>
+            </div>
+          </div>
+
+          <div class="ticket-qr-section">
+            <div>
+              <div style="font-size:0.88rem; font-weight:700; color:var(--primary);">Official Entry Barcode</div>
+              <div style="font-size:0.78rem; color:var(--text-secondary);">Present this QR code or Ticket ID at check-in</div>
+            </div>
+            <div class="mock-qr-code"></div>
+          </div>
+
+          <div class="ticket-actions-bar">
+            <button class="btn btn-primary" style="flex:1;" onclick="window.print()">Print Ticket Pass</button>
+            <a href="registrations.html" class="btn btn-outline" style="flex:1;">My Registrations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Animation Libraries: GSAP, ScrollTrigger & AOS (Recipe Discovery Suite) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Main Engine Scripts -->
+  <script src="script.js"></script>
+  <script>
+    // Home Page Inits
+    document.addEventListener('DOMContentLoaded', () => {
+      const events = getStoredEvents();
+
+      // Render upcoming cards with Quick Filter support
+      const upcomingContainer = document.getElementById('upcoming-events-grid');
+      const tabs = document.querySelectorAll('#figma-quick-tabs .figma-tab-btn');
+
+      function filterAndRenderUpcoming(filterType) {
+        let filtered = events.slice(0, 9);
+        if (filterType === 'trending') {
+          filtered = events.filter(e => e.featured || e.availableSeats <= 20).slice(0, 6);
+        } else if (filterType === 'free') {
+          filtered = events.filter(e => e.isFree);
+        } else if (filterType === 'hybrid') {
+          filtered = events.filter(e => e.mode === 'Hybrid').slice(0, 6);
+        } else if (filterType === 'tech') {
+          filtered = events.filter(e => e.category === 'Technology');
+        }
+
+        if (upcomingContainer) {
+          upcomingContainer.innerHTML = filtered.map(createEventCardHTML).join('');
+          if (typeof initCardTilt === 'function') initCardTilt();
+        }
+      }
+
+      filterAndRenderUpcoming('all');
+
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabs.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterAndRenderUpcoming(btn.dataset.filter);
+        });
+      });
+
+      // Hero Dock Search Trigger
+      const heroDockBtn = document.getElementById('hero-dock-btn');
+      if (heroDockBtn) {
+        heroDockBtn.addEventListener('click', () => {
+          const q = document.getElementById('hero-dock-keyword')?.value.trim() || '';
+          const cat = document.getElementById('hero-dock-category')?.value || '';
+          const mode = document.getElementById('hero-dock-mode')?.value || '';
+          const params = new URLSearchParams();
+          if (q) params.set('q', q);
+          if (cat) params.set('category', cat);
+          if (mode) params.set('mode', mode);
+          window.location.href = `events.html?${params.toString()}`;
+        });
+      }
+
+      // Render categories
+      const catContainer = document.getElementById('categories-grid');
+      if (catContainer) {
+        catContainer.innerHTML = CATEGORIES_DATA.map(createCategoryCardHTML).join('');
+      }
+
+      // Render Moments Gallery
+      const momentsContainer = document.getElementById('moments-gallery-grid');
+      if (momentsContainer) {
+        momentsContainer.innerHTML = renderMomentsGalleryHTML();
+      }
+
+      // Render Keynote Speakers
+      const speakersContainer = document.getElementById('speakers-showcase-grid');
+      if (speakersContainer) {
+        speakersContainer.innerHTML = renderSpeakersHTML();
+      }
+
+      // Render Testimonials
+      const testContainer = document.getElementById('testimonials-grid');
+      const dotsContainer = document.getElementById('testimonial-dots');
+      let currentTestimonial = 0;
+
+      if (testContainer && dotsContainer) {
+        function renderTestimonials() {
+          testContainer.innerHTML = TESTIMONIALS_DATA.map((t, idx) => `
+            <div class="testimonial-card-slide ${idx === currentTestimonial ? 'active-mobile-slide' : ''}">
+              <div class="testimonial-card">
+                <div>
+                  <div class="testimonial-stars">★★★★★</div>
+                  <p class="testimonial-quote">"${t.quote}"</p>
+                </div>
+                <div class="testimonial-author-row">
+                  <img src="${t.avatar}" alt="${t.name}" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-author-name">${t.name}</div>
+                    <div class="testimonial-author-role">${t.role}</div>
+                    <div style="font-size:0.75rem; color:var(--secondary); font-weight:600; margin-top:2px;">Attended: ${t.eventAttended}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `).join('');
+
+          dotsContainer.innerHTML = TESTIMONIALS_DATA.map((_, i) => `
+            <button class="testimonial-dot ${i === currentTestimonial ? 'active' : ''}" onclick="setTestimonial(${i})"></button>
+          `).join('');
+        }
+
+        window.setTestimonial = (i) => {
+          currentTestimonial = i;
+          renderTestimonials();
+        };
+
+        document.getElementById('prev-test-btn').onclick = () => {
+          currentTestimonial = currentTestimonial > 0 ? currentTestimonial - 1 : TESTIMONIALS_DATA.length - 1;
+          renderTestimonials();
+        };
+
+        document.getElementById('next-test-btn').onclick = () => {
+          currentTestimonial = currentTestimonial < TESTIMONIALS_DATA.length - 1 ? currentTestimonial + 1 : 0;
+          renderTestimonials();
+        };
+
+        renderTestimonials();
+      }
+    });
+  </script>
+</body>
+</html>

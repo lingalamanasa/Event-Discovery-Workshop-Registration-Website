@@ -3,7 +3,7 @@
  * Data, State Management (localStorage), Real-time Seats, Modals, Search & GSAP Transitions
  */
 
-const LOCAL_STORAGE_EVENTS_KEY = 'eventora_events_data_v1';
+const LOCAL_STORAGE_EVENTS_KEY = 'eventora_events_data_v2';
 const LOCAL_STORAGE_REG_KEY = 'eventora_user_registrations_v1';
 
 // Initial Events Database
@@ -361,6 +361,154 @@ const INITIAL_EVENTS = [
     }],
     prerequisites: "Basic familiarity with Linux command line and cloud concepts.",
     tags: ["Cybersecurity", "Zero Trust", "Cloud", "Security"]
+  },
+  {
+    id: "evt-109",
+    title: "Executive Leadership & Product Vision Masterclass 2027",
+    tagline: "Strategic Alignment, High-Output Management & Boardroom Influence",
+    category: "Leadership & Strategy",
+    featured: true,
+    price: 120,
+    isFree: false,
+    date: "2027-02-12",
+    displayDate: "Friday, Feb 12, 2027",
+    time: "10:00 AM - 04:30 PM CST",
+    mode: "Hybrid",
+    location: "Executive Innovation Center, Chicago, IL & Virtual Stream",
+    venueAddress: "300 N LaSalle Dr, Chicago, IL 60654",
+    totalSeats: 150,
+    availableSeats: 24,
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80",
+    organizer: {
+      name: "Global Executive Syndicate",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+      role: "Leadership Council"
+    },
+    shortDescription: "Master the frameworks utilized by Fortune 100 executives to navigate organizational hypergrowth and build sustainable competitive advantage.",
+    description: "An intensive masterclass designed for senior directors, VPs, and founders scaling complex cross-functional teams and strategic initiatives.",
+    highlights: ["Executive decision simulations", "Strategic positioning blueprints", "Peer advisory cohort"],
+    schedule: [{ time: "10:00 AM", title: "Strategic Architecture & Governance", speaker: "Dr. Elena Vance" }],
+    speakers: [{
+      name: "Dr. Elena Vance",
+      role: "Executive Advisor",
+      company: "DeepNeural Labs",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+      bio: "Advises Tier-1 tech leadership on strategic organizational agility."
+    }],
+    prerequisites: "Designed for mid-to-senior product, tech, or business leads.",
+    tags: ["Leadership", "Strategy", "Management", "Executive"]
+  },
+  {
+    id: "evt-110",
+    title: "Open-Source AI & Autonomous Agents Global Hackathon",
+    tagline: "Collaborate, Build, and Deploy Multi-Agent Orchestrations",
+    category: "Technology",
+    featured: true,
+    price: 0,
+    isFree: true,
+    date: "2027-02-20",
+    displayDate: "Saturday, Feb 20, 2027",
+    time: "08:00 AM - 08:00 PM EST",
+    mode: "Online",
+    location: "Global Virtual Developer Stage & Discord Hack-Lounge",
+    venueAddress: "Online Interactive Stream & CTF Hack Hub",
+    totalSeats: 600,
+    availableSeats: 92,
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+    organizer: {
+      name: "OpenSource Agents Alliance",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      role: "Community Lead"
+    },
+    shortDescription: "Compete alongside 600+ developers worldwide to craft autonomous agent systems and agentic workflows with $25k in community grants.",
+    description: "Join the largest hands-on autonomous agents virtual hackathon of 2027. Build working demos, receive mentor feedback, and showcase your team.",
+    highlights: ["$25,000 project grant pool", "1-on-1 mentor office hours", "Direct recruiter networking"],
+    schedule: [{ time: "08:00 AM", title: "Opening Keynote & Team Matching", speaker: "OpenSource Alliance" }],
+    speakers: [{
+      name: "Aria Chen",
+      role: "Core Contributor",
+      company: "LangCore Open Hub",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+      bio: "Maintainer of open source agentic tooling and prompt evaluation suites."
+    }],
+    prerequisites: "Open to all software developers, researchers, and designers.",
+    tags: ["AI", "Hackathon", "Open Source", "Free"]
+  },
+  {
+    id: "evt-111",
+    title: "Creative Direction & Brand Identity Architecture",
+    tagline: "Translating Brand Ethos into Unforgettable Multi-Sensory Systems",
+    category: "Design",
+    featured: false,
+    price: 0,
+    isFree: true,
+    date: "2027-03-05",
+    displayDate: "Friday, Mar 5, 2027",
+    time: "01:00 PM - 06:00 PM EST",
+    mode: "Hybrid",
+    location: "SoHo Arts & Creative Pavilion, New York, NY",
+    venueAddress: "480 Broadway, New York, NY 10013",
+    totalSeats: 200,
+    availableSeats: 28,
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80",
+    organizer: {
+      name: "Metropolitan Design Circle",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      role: "Design Curator"
+    },
+    shortDescription: "A curated clinic on crafting cohesive multi-channel brand design systems, luxury typography, and dynamic visual narrative campaigns.",
+    description: "Explore the nuances of high-impact visual identity systems. From kinetic typography to design token architecture.",
+    highlights: ["Live design system critiques", "Spatial typography workshops", "Portfolio review lounge"],
+    schedule: [{ time: "01:00 PM", title: "Brand Identity Fundamentals", speaker: "Julian Vance" }],
+    speakers: [{
+      name: "Julian Vance",
+      role: "Executive Creative Director",
+      company: "Atelier Brand House",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      bio: "Award-winning brand architect with over 15 Cannes Lions honors."
+    }],
+    prerequisites: "Basic experience with Figma or Illustrator.",
+    tags: ["Design", "Branding", "Creative", "Figma", "Free"]
+  },
+  {
+    id: "evt-112",
+    title: "Next-Gen Fintech & Decentralized Infrastructure Forum",
+    tagline: "High-Frequency Settlement, Smart Treasury & Regulatory Frameworks",
+    category: "Business",
+    featured: false,
+    price: 175,
+    isFree: false,
+    date: "2027-03-18",
+    displayDate: "Thursday, Mar 18, 2027",
+    time: "09:30 AM - 05:00 PM EST",
+    mode: "In-Person",
+    location: "Financial District Summit Hall, Boston, MA",
+    venueAddress: "100 Federal St, Boston, MA 02110",
+    totalSeats: 250,
+    availableSeats: 38,
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+    organizer: {
+      name: "New England Fintech Council",
+      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+      role: "Capital & Tech Host"
+    },
+    shortDescription: "Meet institutional leaders, quantitative architects, and regulatory advisors shaping the next generation of modern fintech rails.",
+    description: "Connect with over 250 financial technology innovators, seed investors, and compliance heads for an in-depth exploration of payment networks.",
+    highlights: ["Real-time settlement architectures", "Fintech venture pitch showcase", "Executive dinner network"],
+    schedule: [{ time: "09:30 AM", title: "Institutional Infrastructure Overview", speaker: "Fintech Keynote" }],
+    speakers: [{
+      name: "Marcus Sterling",
+      role: "Head of Infrastructure",
+      company: "Apex Ledger Capital",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      bio: "Architects institutional asset transfer rails and liquidity engines."
+    }],
+    prerequisites: "Familiarity with financial systems or business development.",
+    tags: ["Business", "Fintech", "Finance", "Investment"]
   }
 ];
 
@@ -420,6 +568,14 @@ const CATEGORIES_DATA = [
     icon: "HeartPulse", 
     image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80",
     desc: "Breathwork, cognitive focus, stress resilience & holistic balance." 
+  },
+  { 
+    name: "Leadership & Strategy", 
+    count: 2, 
+    color: "#6366F1", 
+    icon: "Target", 
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    desc: "Executive decision making, agile leadership, board strategy & product vision." 
   }
 ];
 

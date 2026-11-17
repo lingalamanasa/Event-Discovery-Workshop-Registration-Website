@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly — Discover. Connect. Experience.</title>
-  <link rel="icon" type="image/png" href="/assets/stackly-logo-Dxh7I0h3.png">
+  <link rel="icon" type="image/png" href="stackly-logo.png">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,9 @@
   <!-- AOS Scroll Animation Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
   <!-- Confetti CDN -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-F7F4Rjh1.css">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
       <div class="preloader-spinner-wrap">
         <div class="preloader-ring"></div>
         <div class="preloader-icon-box">
-          <img src="/assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" style="height: 32px; object-fit: contain;">
+          <img src="stackly-logo.png" alt="Stackly" style="height: 32px; object-fit: contain;">
         </div>
       </div>
       <div class="preloader-brand">
@@ -44,7 +44,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="nav-logo" aria-label="Stackly Home">
-        <img src="/assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" class="brand-logo-img">
+        <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img">
       </a>
 
       <!-- Desktop Links -->
@@ -82,7 +82,7 @@
   <aside class="mobile-drawer" id="mobile-drawer">
     <div class="mobile-drawer-header">
       <a href="index.html" class="nav-logo">
-        <img src="/assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" class="brand-logo-img" style="height: 30px;">
+        <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img" style="height: 30px;">
       </a>
       <button id="close-drawer-btn" style="background:none; border:none; cursor:pointer; color:var(--text-secondary); font-size: 1.5rem;">&times;</button>
     </div>
@@ -564,7 +564,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="/assets/stackly-logo-Dxh7I0h3.png" alt="Stackly" class="brand-logo-img-footer">
+            <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img-footer">
           </a>
           <p>Your premier gateway to world-class conferences, hands-on workshops, masterclasses, and executive networking sessions.</p>
           <div class="footer-socials">
@@ -773,13 +773,13 @@
       const tabs = document.querySelectorAll('#figma-quick-tabs .figma-tab-btn');
 
       function filterAndRenderUpcoming(filterType) {
-        let filtered = events.slice(0, 8);
+        let filtered = events.slice(0, 9);
         if (filterType === 'trending') {
-          filtered = events.filter(e => e.featured || e.availableSeats <= 20);
+          filtered = events.filter(e => e.featured || e.availableSeats <= 20).slice(0, 6);
         } else if (filterType === 'free') {
           filtered = events.filter(e => e.isFree);
         } else if (filterType === 'hybrid') {
-          filtered = events.filter(e => e.mode === 'Hybrid');
+          filtered = events.filter(e => e.mode === 'Hybrid').slice(0, 6);
         } else if (filterType === 'tech') {
           filtered = events.filter(e => e.category === 'Technology');
         }

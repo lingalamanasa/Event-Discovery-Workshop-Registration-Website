@@ -472,6 +472,9 @@ img {
 .badge-Health-Wellness,
 .badge-Health---Wellness,
 .badge-Health { background: rgba(16, 185, 129, 0.12); color: #059669; }
+.badge-Leadership-Strategy,
+.badge-Leadership---Strategy,
+.badge-Leadership { background: rgba(99, 102, 241, 0.14); color: #4F46E5; }
 
 /* NAVBAR */
 .navbar {
@@ -1522,8 +1525,8 @@ img {
 /* EVENT CARDS & GRID */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(18px, 2.5vw, 32px);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: clamp(20px, 2.5vw, 32px);
 }
 
 /* ========================================================
@@ -2068,7 +2071,7 @@ img {
 }
 
 @media (max-width: 1100px) {
-  .events-grid { grid-template-columns: repeat(2, 1fr); }
+  .events-grid { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
 }
 
 @media (max-width: 700px) {
@@ -2203,15 +2206,15 @@ img {
 }
 
 @media (max-width: 1100px) {
-  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+  .categories-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
 }
 
-@media (max-width: 768px) {
-  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 920px) {
+  .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
 }
 
-@media (max-width: 480px) {
-  .categories-grid { grid-template-columns: 1fr; }
+@media (max-width: 520px) {
+  .categories-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* WHY CHOOSE EVENTORA */
