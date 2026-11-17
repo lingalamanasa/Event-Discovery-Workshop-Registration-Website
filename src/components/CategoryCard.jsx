@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Cpu, Palette, Briefcase, GraduationCap, Megaphone, Camera, HeartPulse, ArrowRight } from 'lucide-react';
+import { Cpu, Palette, Briefcase, GraduationCap, Megaphone, Camera, HeartPulse, Target, ArrowRight } from 'lucide-react';
 import TiltCard from './TiltCard';
 
 const iconMap = {
@@ -10,7 +10,8 @@ const iconMap = {
   GraduationCap,
   Megaphone,
   Camera,
-  HeartPulse
+  HeartPulse,
+  Target
 };
 
 const CategoryCard = ({ category }) => {
@@ -23,13 +24,13 @@ const CategoryCard = ({ category }) => {
 
   return (
     <TiltCard maxTilt={10} perspective={1000}>
-      <div className="category-card" onClick={handleClick} role="button" tabIndex={0}>
+      <div className="category-card ui-ux-card" onClick={handleClick} role="button" tabIndex={0}>
         <div className="category-card-media">
           <img src={category.image} alt={category.name} className="category-card-img" loading="lazy" />
           <div className="category-card-overlay" />
           <span className="category-badge-count">{category.count} {category.count === 1 ? 'Event' : 'Events'}</span>
-          <div className="category-icon-floating" style={{ background: category.color }}>
-            <IconComponent size={18} />
+          <div className="category-icon-floating" style={{ background: category.color }} title={category.name}>
+            <IconComponent size={24} strokeWidth={2.3} color="#FFFFFF" />
           </div>
         </div>
 

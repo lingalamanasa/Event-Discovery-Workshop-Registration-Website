@@ -1169,16 +1169,40 @@ function createEventCardHTML(ev) {
   `;
 }
 
+// High-Clarity Distinct Category SVG Vector Icons
+function getCategoryIconSVG(categoryName) {
+  switch (categoryName) {
+    case 'Technology':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>`;
+    case 'Design':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="#FFFFFF"></circle><circle cx="17.5" cy="10.5" r=".5" fill="#FFFFFF"></circle><circle cx="8.5" cy="7.5" r=".5" fill="#FFFFFF"></circle><circle cx="6.5" cy="12.5" r=".5" fill="#FFFFFF"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>`;
+    case 'Business':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`;
+    case 'Education':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>`;
+    case 'Marketing':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>`;
+    case 'Photography':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>`;
+    case 'Health & Wellness':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`;
+    case 'Leadership & Strategy':
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2" fill="#FFFFFF"></circle></svg>`;
+    default:
+      return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
+  }
+}
+
 // Render Visual Category Card
 function createCategoryCardHTML(c) {
   return `
-    <div class="category-card" onclick="window.location.href='events.html?category=${encodeURIComponent(c.name)}'">
+    <div class="category-card ui-ux-card" data-tilt="true" onclick="window.location.href='events.html?category=${encodeURIComponent(c.name)}'">
       <div class="category-card-media">
         <img src="${c.image}" alt="${c.name}" class="category-card-img" loading="lazy">
         <div class="category-card-overlay"></div>
         <span class="category-badge-count">${c.count} ${c.count === 1 ? 'Event' : 'Events'}</span>
-        <div class="category-icon-floating" style="background:${c.color};">
-          <span>★</span>
+        <div class="category-icon-floating" style="background:${c.color};" title="${c.name}">
+          ${getCategoryIconSVG(c.name)}
         </div>
       </div>
       <div class="category-card-info">
