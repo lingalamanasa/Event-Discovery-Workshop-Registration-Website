@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Registrations — Stackly</title>
+  <link rel="icon" type="image/png" href="stackly-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/styles/registrations.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly Home">
+        <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img">
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="events.html" class="nav-link">Explore Events</a></li>
+          <li><a href="registrations.html" class="nav-link active">My Registrations</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="nav-search-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="registrations.html" class="nav-registrations-pill active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="reg-text">My Bookings</span>
+          <span class="reg-counter-badge">0</span>
+        </a>
+        <button class="hamburger-btn" id="hamburger-btn">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="reg-page-hero">
+      <div class="container">
+        <span class="section-badge">✦ My Bookings</span>
+        <h1 class="section-title">My Event Registrations</h1>
+        <p style="max-width: 560px;">Manage your confirmed event tickets, download digital passes, or review session logistics.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="registrations-content">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><img src="stackly-logo.png" alt="Stackly" class="brand-logo-img-footer"></a>
+          <p>Your premier gateway to world-class conferences, hands-on workshops, masterclasses, and executive networking sessions.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Explore Events</a></li>
+            <li><a href="registrations.html">My Registrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="events.html?category=Technology">Technology</a></li>
+            <li><a href="events.html?category=Design">Design</a></li>
+            <li><a href="events.html?category=Business">Business</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Stay Inspired</h4>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+            <input type="email" placeholder="Your email..." class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TICKET PASS MODAL -->
+  <div class="modal-backdrop" id="ticket-modal">
+    <div class="modal-box ticket-modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-ticket-modal" style="background:#FFF;">&times;</button>
+      <div class="ticket-pass" id="printable-ticket">
+        <div class="ticket-header">
+          <div class="ticket-brand-row">
+            <div style="font-weight:800; font-size:0.9rem;">STACKLY / EVENTORA PASS</div>
+            <span class="ticket-id-badge" id="ticket-modal-id">EVT-PASS-000000</span>
+          </div>
+          <h3 class="ticket-event-title" id="ticket-modal-title">Event Title</h3>
+          <div class="ticket-event-tag" id="ticket-modal-tag">Technology</div>
+        </div>
+        <div class="ticket-divider"><div class="ticket-dashed-line"></div></div>
+        <div class="ticket-body">
+          <div class="ticket-info-grid">
+            <div><div class="ticket-label">Attendee</div><div class="ticket-val" id="ticket-modal-name">Name</div></div>
+            <div><div class="ticket-label">Role</div><div class="ticket-val" id="ticket-modal-role">Role</div></div>
+            <div><div class="ticket-label">Date & Time</div><div class="ticket-val" id="ticket-modal-date">Date</div><div style="font-size:0.8rem; color:var(--text-secondary);" id="ticket-modal-time">Time</div></div>
+            <div><div class="ticket-label">Seats</div><div class="ticket-val" id="ticket-modal-seats">1</div></div>
+            <div style="grid-column: span 2;"><div class="ticket-label">Location</div><div class="ticket-val" id="ticket-modal-location">Location</div><div style="font-size:0.8rem; color:var(--text-secondary); margin-top:2px;" id="ticket-modal-address">Address</div></div>
+          </div>
+          <div class="ticket-qr-section">
+            <div><div style="font-weight:700;">Entry Barcode</div><div style="font-size:0.75rem; color:var(--text-secondary);">Present QR at venue</div></div>
+            <div class="mock-qr-code"></div>
+          </div>
+          <div class="ticket-actions-bar">
+            <button class="btn btn-primary" style="flex:1;" onclick="window.print()">Print Pass</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="document.getElementById('ticket-modal').classList.remove('open')">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANCEL CONFIRMATION MODAL -->
+  <div class="modal-backdrop" id="cancel-dialog">
+    <div class="modal-box cancel-dialog-box" onclick="event.stopPropagation()">
+      <div style="font-size:2rem; color:var(--danger); margin-bottom:12px;">⚠</div>
+      <h3 style="font-size:1.3rem; margin-bottom:8px;">Cancel Registration?</h3>
+      <p style="color:var(--text-secondary); margin-bottom:20px;" id="cancel-dialog-msg">Are you sure? Your seat(s) will be released.</p>
+      <div style="display:flex; gap:12px;">
+        <button class="btn btn-outline" style="flex:1;" onclick="document.getElementById('cancel-dialog').classList.remove('open')">Keep Booking</button>
+        <button class="btn btn-accent" style="flex:1; background-color:var(--danger);" id="confirm-cancel-btn">Yes, Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Animation Libraries: GSAP, ScrollTrigger & AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    let pendingCancelTicketId = null;
+
+    function renderRegistrations() {
+      const container = document.getElementById('registrations-content');
+      const registrations = getStoredRegistrations();
+
+      if (registrations.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state-box">
+            <h3 style="font-size:1.4rem; margin-bottom:8px;">No Event Registrations Yet</h3>
+            <p style="color:var(--text-secondary); margin-bottom:24px;">You haven't reserved tickets for any upcoming events. Discover inspiring workshops and summits to get started!</p>
+            <a href="events.html" class="btn btn-primary btn-lg">Explore Events & Workshops →</a>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+          <div style="font-size:1.1rem; font-weight:700;">Confirmed Reservations (${registrations.length})</div>
+          <a href="events.html" class="btn btn-outline btn-sm">Discover More Events</a>
+        </div>
+        <div>
+          ${registrations.map(ticket => `
+            <div class="reg-card">
+              <div class="reg-card-thumb-wrapper">
+                <img src="${ticket.image}" alt="${ticket.eventTitle}" class="reg-card-thumb">
+              </div>
+              <div class="reg-card-info">
+                <div class="reg-card-top-row">
+                  <span class="badge-category badge-${ticket.eventCategory.replace(/\s+/g, '-')}">${ticket.eventCategory}</span>
+                  <span class="mode-tag">${ticket.mode}</span>
+                  <span class="reg-ticket-code">${ticket.ticketId}</span>
+                </div>
+                <h3 class="reg-card-title">${ticket.eventTitle}</h3>
+                <div class="reg-card-meta">
+                  <div class="reg-card-meta-item">📅 ${ticket.displayDate}</div>
+                  <div class="reg-card-meta-item">⏰ ${ticket.time}</div>
+                  <div class="reg-card-meta-item">📍 ${ticket.location}</div>
+                </div>
+                <div class="reg-attendee-details">
+                  Registered for: <strong>${ticket.fullName}</strong> (${ticket.seats} ${ticket.seats === 1 ? 'ticket' : 'tickets'}) • ${ticket.isFree ? 'Free Admission' : '$' + ticket.price + ' Paid'}
+                </div>
+              </div>
+              <div class="reg-card-actions">
+                <button class="btn btn-primary btn-sm" onclick='showTicketPassModal(${JSON.stringify(ticket)})'>View Pass</button>
+                <a href="event-details.html?id=${ticket.eventId}" class="btn btn-outline btn-sm">Event Page</a>
+                <button class="btn btn-outline btn-sm" style="color:var(--danger); border-color:rgba(239,68,68,0.3);" onclick="promptCancel('${ticket.ticketId}', '${ticket.eventTitle.replace(/'/g, "\\'")}', ${ticket.seats}, '${ticket.eventId}')">Cancel</button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    window.promptCancel = (ticketId, title, seats, eventId) => {
+      pendingCancelTicketId = { ticketId, seats, eventId, title };
+      document.getElementById('cancel-dialog-msg').textContent = `Are you sure you want to cancel your booking for "${title}"? Your ${seats} seat(s) will be released.`;
+      document.getElementById('cancel-dialog').classList.add('open');
+    };
+
+    document.getElementById('confirm-cancel-btn').onclick = () => {
+      if (!pendingCancelTicketId) return;
+      const { ticketId, seats, eventId, title } = pendingCancelTicketId;
+
+      // Restore seats
+      const events = getStoredEvents();
+      const target = events.find(e => e.id === eventId);
+      if (target) {
+        target.availableSeats = Math.min(target.totalSeats, target.availableSeats + seats);
+        saveStoredEvents(events);
+      }
+
+      // Remove registration
+      let registrations = getStoredRegistrations();
+      registrations = registrations.filter(r => r.ticketId !== ticketId);
+      saveStoredRegistrations(registrations);
+
+      updateBadgeCount();
+      document.getElementById('cancel-dialog').classList.remove('open');
+      showToast(`Registration for "${title}" has been cancelled.`, 'info');
+      renderRegistrations();
+    };
+
+    document.addEventListener('DOMContentLoaded', renderRegistrations);
+  </script>
+</body>
+</html>
+

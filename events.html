@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Events & Workshops — Stackly</title>
+  <link rel="icon" type="image/png" href="stackly-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/styles/explore.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly Home">
+        <img src="stackly-logo.png" alt="Stackly" class="brand-logo-img">
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="events.html" class="nav-link active">Explore Events</a></li>
+          <li><a href="registrations.html" class="nav-link">My Registrations</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="registrations.html" class="nav-registrations-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="reg-text">My Bookings</span>
+          <span class="reg-counter-badge">0</span>
+        </a>
+        <button class="hamburger-btn" id="hamburger-btn">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="nav-logo"><img src="stackly-logo.png" alt="Stackly" class="brand-logo-img" style="height: 30px;"></a>
+      <button id="close-drawer-btn" style="background:none; border:none; cursor:pointer; font-size:1.5rem;">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li class="mobile-nav-item"><a href="index.html"><span>Home</span> →</a></li>
+      <li class="mobile-nav-item"><a href="events.html" class="active"><span>Explore Events</span> →</a></li>
+      <li class="mobile-nav-item"><a href="registrations.html"><span>My Registrations</span> (<span class="reg-counter-badge">0</span>)</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section class="explore-hero">
+      <div class="container">
+        <div class="explore-header-row">
+          <div>
+            <span class="section-badge">✦ Full Event Catalog</span>
+            <h1 class="section-title">Explore Events & Workshops</h1>
+            <p style="max-width: 560px;">Discover transformative conferences, intensive technical masterclasses, and hands-on professional experiences.</p>
+          </div>
+          <button id="reset-filters-btn" class="btn btn-outline btn-sm">↺ Reset Filters</button>
+        </div>
+
+        <div class="explore-filters-panel">
+          <div class="filters-top-row">
+            <div class="explore-search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="explore-search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="catalog-search-input" placeholder="Search by title, speaker, topic, or location..." class="explore-search-input">
+            </div>
+
+            <div class="explore-dropdowns">
+              <select id="mode-filter" class="filter-select">
+                <option value="All Modes">All Formats</option>
+                <option value="In-Person">In-Person Only</option>
+                <option value="Online">Online / Virtual</option>
+                <option value="Hybrid">Hybrid (Both)</option>
+              </select>
+
+              <select id="price-filter" class="filter-select">
+                <option value="All Prices">All Pricing</option>
+                <option value="Free">Free Admission</option>
+                <option value="Paid">Paid / VIP Passes</option>
+              </select>
+
+              <select id="sort-filter" class="filter-select">
+                <option value="upcoming">Sort by: Soonest Date</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="seats">Seats: Most Available</option>
+                <option value="title">Alphabetical (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="category-pills-row" id="category-pills">
+            <button class="category-pill active" data-cat="All Categories">All Categories</button>
+            <button class="category-pill" data-cat="Technology">Technology</button>
+            <button class="category-pill" data-cat="Design">Design</button>
+            <button class="category-pill" data-cat="Business">Business</button>
+            <button class="category-pill" data-cat="Education">Education</button>
+            <button class="category-pill" data-cat="Marketing">Marketing</button>
+            <button class="category-pill" data-cat="Photography">Photography</button>
+            <button class="category-pill" data-cat="Health & Wellness">Health & Wellness</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 32px;">
+      <div class="container">
+        <div class="results-summary-bar">
+          <div class="results-count" id="catalog-results-count">Showing Events</div>
+          <span class="section-badge" id="active-cat-badge" style="margin:0; display:none;">Category</span>
+        </div>
+
+        <div class="events-grid" id="catalog-events-grid"></div>
+        <div id="catalog-empty-state" class="empty-state-box" style="display:none;">
+          <h3 style="font-size:1.3rem; margin-bottom:8px;">No matching events found</h3>
+          <p style="color:var(--text-secondary); margin-bottom:20px;">Try adjusting your search keywords or resetting filters.</p>
+          <button class="btn btn-primary" onclick="resetAllFilters()">Clear All Filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><img src="stackly-logo.png" alt="Stackly" class="brand-logo-img-footer"></a>
+          <p>Your premier gateway to world-class conferences, hands-on workshops, masterclasses, and executive networking sessions.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Explore Events</a></li>
+            <li><a href="registrations.html">My Registrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="events.html?category=Technology">Technology</a></li>
+            <li><a href="events.html?category=Design">Design</a></li>
+            <li><a href="events.html?category=Business">Business</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Stay Inspired</h4>
+          <p style="color:#A2A2BE; font-size:0.92rem; margin-bottom:14px;">Subscribe for weekly curated event drops.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+            <input type="email" placeholder="Your email..." class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="modal-backdrop" id="search-modal">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-search-btn">&times;</button>
+      <div class="search-modal-header">
+        <div class="search-input-wrapper">
+          <input type="text" placeholder="Search..." class="search-input-field" id="search-modal-input">
+        </div>
+      </div>
+      <div class="search-results-list" id="search-modal-results"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="registration-modal">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-reg-modal">&times;</button>
+      <div class="reg-modal-header">
+        <span class="badge-category" id="reg-event-badge">Technology</span>
+        <h2 class="reg-modal-title">Event Registration</h2>
+        <div class="reg-modal-event-name" id="reg-event-name-display">Event Title</div>
+      </div>
+      <form class="reg-form" id="reg-form">
+        <input type="hidden" id="reg-event-id">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" id="reg-fullname" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input type="email" id="reg-email" class="form-input" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phone *</label>
+            <input type="tel" id="reg-phone" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Seats *</label>
+            <select id="reg-seats" class="form-select"></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Role</label>
+          <select id="reg-role" class="form-select">
+            <option value="Engineer">Software Engineer</option>
+            <option value="Designer">UI/UX Designer</option>
+            <option value="Founder">Founder / Executive</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="order-summary-box">
+          <div>
+            <div style="font-size:0.85rem; color:var(--text-secondary);">Total</div>
+            <div id="order-summary-detail" style="font-weight:600;">1 Seat</div>
+          </div>
+          <div class="order-summary-price" id="order-summary-price">$0</div>
+        </div>
+        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">Complete Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="ticket-modal">
+    <div class="modal-box ticket-modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" id="close-ticket-modal" style="background:#FFF;">&times;</button>
+      <div class="ticket-pass" id="printable-ticket">
+        <div class="ticket-header">
+          <div class="ticket-brand-row">
+            <div style="font-weight:800; font-size:0.9rem;">STACKLY / EVENTORA PASS</div>
+            <span class="ticket-id-badge" id="ticket-modal-id">EVT-PASS-000000</span>
+          </div>
+          <h3 class="ticket-event-title" id="ticket-modal-title">Event Title</h3>
+          <div class="ticket-event-tag" id="ticket-modal-tag">Technology</div>
+        </div>
+        <div class="ticket-divider"><div class="ticket-dashed-line"></div></div>
+        <div class="ticket-body">
+          <div class="ticket-info-grid">
+            <div><div class="ticket-label">Attendee</div><div class="ticket-val" id="ticket-modal-name">Name</div></div>
+            <div><div class="ticket-label">Role</div><div class="ticket-val" id="ticket-modal-role">Role</div></div>
+            <div><div class="ticket-label">Date & Time</div><div class="ticket-val" id="ticket-modal-date">Date</div><div style="font-size:0.8rem; color:var(--text-secondary);" id="ticket-modal-time">Time</div></div>
+            <div><div class="ticket-label">Seats</div><div class="ticket-val" id="ticket-modal-seats">1</div></div>
+            <div style="grid-column: span 2;"><div class="ticket-label">Location</div><div class="ticket-val" id="ticket-modal-location">Location</div><div style="font-size:0.8rem; color:var(--text-secondary);" id="ticket-modal-address">Address</div></div>
+          </div>
+          <div class="ticket-qr-section">
+            <div><div style="font-weight:700;">Entry Barcode</div><div style="font-size:0.75rem; color:var(--text-secondary);">Present QR at venue</div></div>
+            <div class="mock-qr-code"></div>
+          </div>
+          <div class="ticket-actions-bar">
+            <button class="btn btn-primary" style="flex:1;" onclick="window.print()">Print Pass</button>
+            <a href="registrations.html" class="btn btn-outline" style="flex:1;">My Registrations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Animation Libraries: GSAP, ScrollTrigger & AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let selectedCategory = urlParams.get('category') || 'All Categories';
+      let selectedMode = urlParams.get('mode') || 'All Modes';
+      let selectedPrice = 'All Prices';
+      let selectedSort = 'upcoming';
+      let searchTerm = '';
+
+      const searchInput = document.getElementById('catalog-search-input');
+      const modeSelect = document.getElementById('mode-filter');
+      const priceSelect = document.getElementById('price-filter');
+      const sortSelect = document.getElementById('sort-filter');
+      const pillsContainer = document.getElementById('category-pills');
+      const grid = document.getElementById('catalog-events-grid');
+      const countDisplay = document.getElementById('catalog-results-count');
+      const emptyState = document.getElementById('catalog-empty-state');
+      const catBadge = document.getElementById('active-cat-badge');
+
+      if (modeSelect && selectedMode !== 'All Modes') modeSelect.value = selectedMode;
+
+      // Highlight active pill
+      pillsContainer.querySelectorAll('.category-pill').forEach(btn => {
+        if (btn.getAttribute('data-cat') === selectedCategory) {
+          pillsContainer.querySelectorAll('.category-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+        btn.onclick = () => {
+          pillsContainer.querySelectorAll('.category-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          selectedCategory = btn.getAttribute('data-cat');
+          renderCatalog();
+        };
+      });
+
+      function renderCatalog() {
+        const events = getStoredEvents();
+        const filtered = events.filter(ev => {
+          if (searchTerm) {
+            const q = searchTerm.toLowerCase();
+            const matchTitle = ev.title.toLowerCase().includes(q);
+            const matchLoc = ev.location.toLowerCase().includes(q);
+            const matchSpeaker = ev.speakers.some(s => s.name.toLowerCase().includes(q));
+            if (!matchTitle && !matchLoc && !matchSpeaker) return false;
+          }
+          if (selectedCategory !== 'All Categories' && ev.category !== selectedCategory) return false;
+          if (selectedMode !== 'All Modes' && ev.mode !== selectedMode) return false;
+          if (selectedPrice === 'Free' && !ev.isFree) return false;
+          if (selectedPrice === 'Paid' && ev.isFree) return false;
+          return true;
+        }).sort((a, b) => {
+          if (selectedSort === 'upcoming') return new Date(a.date) - new Date(b.date);
+          if (selectedSort === 'price-low') return (a.isFree ? 0 : a.price) - (b.isFree ? 0 : b.price);
+          if (selectedSort === 'price-high') return (b.isFree ? 0 : b.price) - (a.isFree ? 0 : a.price);
+          if (selectedSort === 'seats') return b.availableSeats - a.availableSeats;
+          if (selectedSort === 'title') return a.title.localeCompare(b.title);
+          return 0;
+        });
+
+        countDisplay.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? 'Event' : 'Events'}`;
+        if (selectedCategory !== 'All Categories') {
+          catBadge.style.display = 'inline-flex';
+          catBadge.textContent = selectedCategory;
+        } else {
+          catBadge.style.display = 'none';
+        }
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          emptyState.style.display = 'block';
+        } else {
+          emptyState.style.display = 'none';
+          grid.innerHTML = filtered.map(createEventCardHTML).join('');
+          if (typeof initCardTilt === 'function') initCardTilt();
+        }
+      }
+
+      if (searchInput) {
+        searchInput.oninput = (e) => {
+          searchTerm = e.target.value.trim();
+          renderCatalog();
+        };
+      }
+      if (modeSelect) modeSelect.onchange = (e) => { selectedMode = e.target.value; renderCatalog(); };
+      if (priceSelect) priceSelect.onchange = (e) => { selectedPrice = e.target.value; renderCatalog(); };
+      if (sortSelect) sortSelect.onchange = (e) => { selectedSort = e.target.value; renderCatalog(); };
+
+      window.resetAllFilters = () => {
+        searchTerm = '';
+        selectedCategory = 'All Categories';
+        selectedMode = 'All Modes';
+        selectedPrice = 'All Prices';
+        selectedSort = 'upcoming';
+        if (searchInput) searchInput.value = '';
+        if (modeSelect) modeSelect.value = 'All Modes';
+        if (priceSelect) priceSelect.value = 'All Prices';
+        if (sortSelect) sortSelect.value = 'upcoming';
+        pillsContainer.querySelectorAll('.category-pill').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-cat') === 'All Categories');
+        });
+        renderCatalog();
+      };
+
+      document.getElementById('reset-filters-btn').onclick = window.resetAllFilters;
+
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>
+
