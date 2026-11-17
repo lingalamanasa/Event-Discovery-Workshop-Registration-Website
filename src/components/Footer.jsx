@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="footer-brand">
             <Link to="/" className="nav-logo" aria-label="Stackly Home">
               <img
-                src="/stackly-logo.png"
+                src="/stackly-logo.webp"
                 alt="Stackly"
                 className="brand-logo-img-footer"
               />

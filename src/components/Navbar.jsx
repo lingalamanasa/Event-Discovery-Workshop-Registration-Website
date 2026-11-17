@@ -147,7 +147,7 @@ const Navbar = () => {
           <Magnetic strength={0.2}>
             <Link to="/" className="nav-logo" ref={logoRef} aria-label="Stackly Home">
               <img
-                src="/stackly-logo.png"
+                src="/stackly-logo.webp"
                 alt="Stackly"
                 className="brand-logo-img"
               />
@@ -236,7 +236,7 @@ const Navbar = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div className="nav-logo">
             <img
-              src="/stackly-logo.png"
+              src="/stackly-logo.webp"
               alt="Stackly"
               className="brand-logo-img-mobile"
             />

@@ -333,9 +333,9 @@ const HomePage = () => {
               {/* Floating Attendee count with animated counter */}
               <div className="floating-attendees-badge">
                 <div className="attendee-avatar-stack">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Attendee 1" />
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Attendee 2" />
-                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt="Attendee 3" />
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=160&q=55" alt="Attendee 1" />
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=160&q=55" alt="Attendee 2" />
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=webp&fit=crop&w=160&q=55" alt="Attendee 3" />
                 </div>
                 <div className="attendees-text">
                   <span style={{ color: 'var(--secondary)' }}>
@@ -348,7 +348,7 @@ const HomePage = () => {
               <TiltCard maxTilt={6} perspective={1400}>
                 <div className="hero-main-card">
                   <img
-                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80"
+                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?fm=webp&fit=crop&w=650&q=55"
                     alt="Excited attendees at Global Tech and AI Summit"
                     className="hero-main-img"
                   />
@@ -372,7 +372,7 @@ const HomePage = () => {
               {/* Floating Live Workshop Pill with Real Photography */}
               <div className="floating-live-workshop">
                 <img
-                  src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=160&q=80"
+                  src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?fm=webp&fit=crop&w=160&q=55"
                   alt="Live Workshop Session"
                   className="floating-live-img"
                 />
@@ -616,7 +616,7 @@ const HomePage = () => {
               <TiltCard maxTilt={5} perspective={1200} className="bento-card bento-card-mentor">
                 <div className="speaker-avatar-wrap" style={{ width: '68px', height: '68px' }}>
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=450&q=55"
                     alt="Dr. Elena Vance"
                     className="speaker-avatar-img"
                   />
@@ -759,10 +759,10 @@ const HomePage = () => {
               };
 
               const featurePhotos = [
-                "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                "https://images.unsplash.com/photo-1540575467063-178a50c2df87?fm=webp&fit=crop&w=450&q=55",
+                "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?fm=webp&fit=crop&w=450&q=55",
+                "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?fm=webp&fit=crop&w=450&q=55",
+                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?fm=webp&fit=crop&w=450&q=55"
               ];
 
               const statsMap = [

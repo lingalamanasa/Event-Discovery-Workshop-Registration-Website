@@ -15,11 +15,11 @@ export const initialEvents = [
     venueAddress: "780 Howard St, San Francisco, CA 94103",
     totalSeats: 350,
     availableSeats: 42,
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Silicon Valley AI Consortium",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=160&q=55",
       role: "Lead Tech Organizer"
     },
     shortDescription: "Join 1,000+ engineers, researchers, and tech pioneers to dive deep into multimodal LLMs, agentic workflows, and future computing paradigms.",
@@ -44,21 +44,21 @@ export const initialEvents = [
         name: "Dr. Elena Vance",
         role: "Chief Research Scientist",
         company: "DeepNeural Labs",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=450&q=55",
         bio: "Pioneered neural architecture search algorithms and authored foundational papers on agent collaboration."
       },
       {
         name: "Marcus Sterling",
         role: "VP of Engineering",
         company: "Veloce Systems",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=450&q=55",
         bio: "Specializes in high-throughput distributed model serving and edge tensor processing units."
       },
       {
         name: "Aria Chen",
         role: "Head of AI Platform",
         company: "Synthetix AI",
-        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=webp&fit=crop&w=450&q=55",
         bio: "Building developer frameworks for enterprise agentic pipelines and adaptive RAG architectures."
       }
     ],
@@ -81,11 +81,11 @@ export const initialEvents = [
     venueAddress: "Online Streaming via Eventora Studio",
     totalSeats: 120,
     availableSeats: 18,
-    image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "PixelCraft Design Guild",
-      avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fm=webp&fit=crop&w=160&q=55",
       role: "Design Educator Community"
     },
     shortDescription: "Master scalable design tokens, dynamic auto-layout components, and developer handoff workflows in an immersive live Figma workshop.",
@@ -109,14 +109,14 @@ export const initialEvents = [
         name: "Siddharth Rao",
         role: "Principal Product Designer",
         company: "Stripe",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=webp&fit=crop&w=450&q=55",
         bio: "Led design system overhauls for fintech apps used by over 50 million global customers."
       },
       {
         name: "Camila Gomez",
         role: "Design Systems Architect",
         company: "Atlassian",
-        avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fm=webp&fit=crop&w=450&q=55",
         bio: "Specialist in cross-platform tokens, accessible color theory, and developer collaboration."
       }
     ],
@@ -139,11 +139,11 @@ export const initialEvents = [
     venueAddress: "250 Vesey St, New York, NY 10281",
     totalSeats: 250,
     availableSeats: 31,
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Apex Capital Partners",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fm=webp&fit=crop&w=160&q=55",
       role: "Venture Accelerator"
     },
     shortDescription: "Meet 40+ active venture capitalists, pitch your seed or Series A concept, and learn scale strategies from unicorn founders.",
@@ -168,14 +168,14 @@ export const initialEvents = [
         name: "Victoria Sterling",
         role: "Managing Partner",
         company: "Horizon Ventures",
-        avatar: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?fm=webp&fit=crop&w=450&q=55",
         bio: "Seed investor in 14 unicorns with over $1.8B in early stage tech assets under management."
       },
       {
         name: "David Vance",
         role: "Co-Founder & CEO",
         company: "CloudCore Dynamics",
-        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?fm=webp&fit=crop&w=450&q=55",
         bio: "Scaled B2B enterprise software startup from dorm room to NYSE listing in 6 years."
       }
     ],
@@ -198,11 +198,11 @@ export const initialEvents = [
     venueAddress: "Online Interactive Stream with Sandbox",
     totalSeats: 500,
     availableSeats: 87,
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Modern Web Academy",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=160&q=55",
       role: "Open Source Community"
     },
     shortDescription: "A completely free deep-dive into React Server Components, streaming SSR, Core Web Vitals optimization, and enterprise architecture.",
@@ -226,14 +226,14 @@ export const initialEvents = [
         name: "Alex Rivera",
         role: "Staff Frontend Architect",
         company: "Vercel Alumni",
-        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?fm=webp&fit=crop&w=450&q=55",
         bio: "Open source contributor to React ecosystem with over 12 years of web platform engineering experience."
       },
       {
         name: "Priya Sharma",
         role: "Web Performance Specialist",
         company: "BrowserSpeed Lab",
-        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=webp&fit=crop&w=450&q=55",
         bio: "Regular speaker at JSConf and author of best-selling guides on optimizing Core Web Vitals."
       }
     ],
@@ -256,11 +256,11 @@ export const initialEvents = [
     venueAddress: "401 N Michigan Ave, Chicago, IL 60611",
     totalSeats: 180,
     availableSeats: 24,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Elevate Media Collective",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=webp&fit=crop&w=160&q=55",
       role: "Growth Agency Network"
     },
     shortDescription: "Discover how top consumer brands craft irresistible narratives, master algorithm changes on short-form video, and build high-conversion funnels.",
@@ -284,14 +284,14 @@ export const initialEvents = [
         name: "Maya Lin",
         role: "Chief Brand Strategist",
         company: "Narrative Co.",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=450&q=55",
         bio: "Former VP of Brand at leading DTC brand; scaled organic TikTok and Instagram community to 4M+ followers."
       },
       {
         name: "Jordan Blake",
         role: "Growth Marketing Director",
         company: "VibeMetrics",
-        avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?fm=webp&fit=crop&w=450&q=55",
         bio: "Data-driven growth marketer managing $30M+ annual omnichannel performance budgets."
       }
     ],
@@ -314,11 +314,11 @@ export const initialEvents = [
     venueAddress: "1230 S Santa Fe Ave, Los Angeles, CA 90021",
     totalSeats: 25,
     availableSeats: 5,
-    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Aperture Guild of Los Angeles",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=160&q=55",
       role: "Visual Arts Society"
     },
     shortDescription: "Work with professional fashion models, high-end Profoto continuous and strobe lighting, and learn color-grading in an intimate studio setting.",
@@ -342,7 +342,7 @@ export const initialEvents = [
         name: "Julian Thorne",
         role: "Editorial Fashion Photographer",
         company: "Thorne Imagery",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=webp&fit=crop&w=450&q=55",
         bio: "Regular contributor to Vanity Fair, Harper's Bazaar, and commercial campaigns for luxury brands worldwide."
       }
     ],
@@ -365,11 +365,11 @@ export const initialEvents = [
     venueAddress: "1450 Baseline Rd, Boulder, CO 80302",
     totalSeats: 80,
     availableSeats: 19,
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Summit Wellness Institute",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=webp&fit=crop&w=160&q=55",
       role: "Mind-Body Science Lab"
     },
     shortDescription: "Reclaim your mental clarity, learn clinical breathwork techniques, and design daily habits to prevent burnout in high-demand environments.",
@@ -393,14 +393,14 @@ export const initialEvents = [
         name: "Dr. Kaelen Cruz",
         role: "Neuroscientist & Clinical Psychologist",
         company: "MindBody Research Group",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=450&q=55",
         bio: "Specializes in stress resilience biomarkers, sleep architecture, and executive cognitive health."
       },
       {
         name: "Mira Jensen",
         role: "Holistic Breathwork & Somatic Guide",
         company: "Prana Health",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=450&q=55",
         bio: "Facilitated over 500 breathwork circles for Olympic athletes and corporate tech leaders."
       }
     ],
@@ -423,11 +423,11 @@ export const initialEvents = [
     venueAddress: "Virtual Terminal & CTF Range",
     totalSeats: 300,
     availableSeats: 62,
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "CyberShield Institute",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=160&q=55",
       role: "Security Research Collective"
     },
     shortDescription: "Experience real-world red team attack simulations and architect resilient Zero-Trust defenses in an interactive hands-on virtual cyber range.",
@@ -451,14 +451,14 @@ export const initialEvents = [
         name: "Tariq Mansoor",
         role: "Principal SecOps Engineer",
         company: "Fortress Zero",
-        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?fm=webp&fit=crop&w=450&q=55",
         bio: "Former intelligence contractor and certified ethical hacker specializing in cloud perimeter hardening."
       },
       {
         name: "Jessica Wu",
         role: "Director of Threat Intelligence",
         company: "Sentinel Net",
-        avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80",
+        avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fm=webp&fit=crop&w=450&q=55",
         bio: "Author of industry-recognized threat reports and keynote speaker at DEF CON and Black Hat."
       }
     ],
@@ -481,11 +481,11 @@ export const initialEvents = [
     venueAddress: "300 N LaSalle Dr, Chicago, IL 60654",
     totalSeats: 150,
     availableSeats: 24,
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Global Executive Syndicate",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=160&q=55",
       role: "Leadership Council"
     },
     shortDescription: "Master the frameworks utilized by Fortune 100 executives to navigate organizational hypergrowth and build sustainable competitive advantage.",
@@ -496,7 +496,7 @@ export const initialEvents = [
       name: "Dr. Elena Vance",
       role: "Executive Advisor",
       company: "DeepNeural Labs",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=450&q=55",
       bio: "Advises Tier-1 tech leadership on strategic organizational agility."
     }],
     prerequisites: "Designed for mid-to-senior product, tech, or business leads.",
@@ -518,11 +518,11 @@ export const initialEvents = [
     venueAddress: "Online Interactive Stream & CTF Hack Hub",
     totalSeats: 600,
     availableSeats: 92,
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "OpenSource Agents Alliance",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=160&q=55",
       role: "Community Lead"
     },
     shortDescription: "Compete alongside 600+ developers worldwide to craft autonomous agent systems and agentic workflows with $25k in community grants.",
@@ -533,7 +533,7 @@ export const initialEvents = [
       name: "Aria Chen",
       role: "Core Contributor",
       company: "LangCore Open Hub",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=webp&fit=crop&w=450&q=55",
       bio: "Maintainer of open source agentic tooling and prompt evaluation suites."
     }],
     prerequisites: "Open to all software developers, researchers, and designers.",
@@ -555,11 +555,11 @@ export const initialEvents = [
     venueAddress: "480 Broadway, New York, NY 10013",
     totalSeats: 200,
     availableSeats: 28,
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "Metropolitan Design Circle",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=webp&fit=crop&w=160&q=55",
       role: "Design Curator"
     },
     shortDescription: "A curated clinic on crafting cohesive multi-channel brand design systems, luxury typography, and dynamic visual narrative campaigns.",
@@ -570,7 +570,7 @@ export const initialEvents = [
       name: "Julian Vance",
       role: "Executive Creative Director",
       company: "Atelier Brand House",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=450&q=55",
       bio: "Award-winning brand architect with over 15 Cannes Lions honors."
     }],
     prerequisites: "Basic experience with Figma or Illustrator.",
@@ -592,11 +592,11 @@ export const initialEvents = [
     venueAddress: "100 Federal St, Boston, MA 02110",
     totalSeats: 250,
     availableSeats: 38,
-    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?fm=webp&fit=crop&w=650&q=55",
+    bannerImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=650&q=55",
     organizer: {
       name: "New England Fintech Council",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?fm=webp&fit=crop&w=160&q=55",
       role: "Capital & Tech Host"
     },
     shortDescription: "Meet institutional leaders, quantitative architects, and regulatory advisors shaping the next generation of modern fintech rails.",
@@ -607,7 +607,7 @@ export const initialEvents = [
       name: "Marcus Sterling",
       role: "Head of Infrastructure",
       company: "Apex Ledger Capital",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=webp&fit=crop&w=450&q=55",
       bio: "Architects institutional asset transfer rails and liquidity engines."
     }],
     prerequisites: "Familiarity with financial systems or business development.",
@@ -622,7 +622,7 @@ export const categoriesList = [
     icon: "Cpu",
     count: 2,
     color: "#7357E8",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?fm=webp&fit=crop&w=450&q=55",
     description: "AI, cloud architectures, developer bootcamps & software innovations."
   },
   {
@@ -631,7 +631,7 @@ export const categoriesList = [
     icon: "Palette",
     count: 1,
     color: "#FF796C",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?fm=webp&fit=crop&w=450&q=55",
     description: "UI/UX, design systems, design thinking & creative direction."
   },
   {
@@ -640,7 +640,7 @@ export const categoriesList = [
     icon: "Briefcase",
     count: 1,
     color: "#0F111A",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=450&q=55",
     description: "Venture capital, startup pitching, leadership & executive scaling."
   },
   {
@@ -649,7 +649,7 @@ export const categoriesList = [
     icon: "GraduationCap",
     count: 1,
     color: "#0D9488",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?fm=webp&fit=crop&w=450&q=55",
     description: "Coding bootcamps, masterclasses, academic webinars & skills training."
   },
   {
@@ -658,7 +658,7 @@ export const categoriesList = [
     icon: "Megaphone",
     count: 1,
     color: "#EC4899",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&fit=crop&w=450&q=55",
     description: "Storytelling, viral social media, growth hacking & brand building."
   },
   {
@@ -667,7 +667,7 @@ export const categoriesList = [
     icon: "Camera",
     count: 1,
     color: "#F59E0B",
-    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?fm=webp&fit=crop&w=450&q=55",
     description: "Editorial portraiture, studio lighting, cinematic retouching & framing."
   },
   {
@@ -676,7 +676,7 @@ export const categoriesList = [
     icon: "HeartPulse",
     count: 1,
     color: "#10B981",
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?fm=webp&fit=crop&w=450&q=55",
     description: "Breathwork, cognitive focus, stress resilience & holistic balance."
   },
   {
@@ -685,7 +685,7 @@ export const categoriesList = [
     icon: "Target",
     count: 2,
     color: "#6366F1",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=webp&fit=crop&w=450&q=55",
     description: "Executive decision making, agile leadership, board strategy & product vision."
   }
 ];
@@ -729,7 +729,7 @@ export const testimonialsData = [
     id: "test-1",
     name: "Sophia Martinez",
     role: "Senior AI Engineer at NeuralVibe",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=160&q=55",
     quote: "Eventora transformed how I discover high-signal tech workshops. Registering for the AI Summit took 30 seconds, and the digital pass made on-site entry seamless.",
     rating: 5,
     eventAttended: "Global AI & Machine Learning Summit"
@@ -738,7 +738,7 @@ export const testimonialsData = [
     id: "test-2",
     name: "Liam Chen",
     role: "Lead Product Designer at FinStack",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=160&q=55",
     quote: "The Figma Design Systems masterclass was world-class. Being able to cancel or reschedule tickets with one click gives total peace of mind.",
     rating: 5,
     eventAttended: "Modern UI/UX Design System Masterclass"
@@ -747,7 +747,7 @@ export const testimonialsData = [
     id: "test-3",
     name: "Amara Okafor",
     role: "Founder & CEO, Horizon Labs",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=160&q=55",
     quote: "Found my lead investor at the Venture Velocity pitch summit organized through Eventora. The caliber of professionals and curated networking is unrivaled.",
     rating: 5,
     eventAttended: "Venture Velocity Angel Pitch Summit"
@@ -757,42 +757,42 @@ export const testimonialsData = [
 export const momentsGalleryData = [
   {
     id: "m-1",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?fm=webp&fit=crop&w=650&q=55",
     title: "Global AI Keynote",
     tag: "Main Stage",
     location: "San Francisco, CA"
   },
   {
     id: "m-2",
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?fm=webp&fit=crop&w=650&q=55",
     title: "Design Sprint & Ideation",
     tag: "Workshop Lab",
     location: "Austin, TX"
   },
   {
     id: "m-3",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?fm=webp&fit=crop&w=650&q=55",
     title: "Hackathon Team Jam",
     tag: "Collaboration",
     location: "Seattle, WA"
   },
   {
     id: "m-4",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?fm=webp&fit=crop&w=650&q=55",
     title: "Executive Networking Night",
     tag: "VIP Lounge",
     location: "New York, NY"
   },
   {
     id: "m-5",
-    image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?fm=webp&fit=crop&w=650&q=55",
     title: "Spatial Computing Lab",
     tag: "Live Demo",
     location: "Berlin, DE"
   },
   {
     id: "m-6",
-    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?fm=webp&fit=crop&w=650&q=55",
     title: "Pitch Arena Winners",
     tag: "Standing Ovation",
     location: "London, UK"
@@ -805,7 +805,7 @@ export const featuredSpeakersData = [
     name: "Dr. Elena Vance",
     role: "Chief AI Scientist",
     company: "DeepNeural Labs",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=webp&fit=crop&w=450&q=55",
     topic: "Autonomous Agent Swarms",
     badge: "Keynote"
   },
@@ -814,7 +814,7 @@ export const featuredSpeakersData = [
     name: "Marcus Sterling",
     role: "VP of Engineering",
     company: "Veloce Systems",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=webp&fit=crop&w=450&q=55",
     topic: "Sub-10ms Model Serving",
     badge: "Masterclass"
   },
@@ -823,7 +823,7 @@ export const featuredSpeakersData = [
     name: "Priya Sharma",
     role: "Design Director",
     company: "StudioForm",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=webp&fit=crop&w=450&q=55",
     topic: "Modern Design Systems",
     badge: "Interactive Lab"
   },
@@ -832,7 +832,7 @@ export const featuredSpeakersData = [
     name: "David K. Vance",
     role: "Managing Partner",
     company: "Apex Ventures",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=webp&fit=crop&w=450&q=55",
     topic: "Venture Velocity & Pitching",
     badge: "Fireside Chat"
   },
@@ -841,7 +841,7 @@ export const featuredSpeakersData = [
     name: "Aria Chen",
     role: "Head of AI Platform",
     company: "Synthetix AI",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fm=webp&fit=crop&w=450&q=55",
     topic: "Fine-Tuning Open Source LLMs",
     badge: "Code Clinic"
   },
@@ -850,7 +850,7 @@ export const featuredSpeakersData = [
     name: "Tariq Mansoor",
     role: "Principal SecOps Engineer",
     company: "Fortress Zero",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?fm=webp&fit=crop&w=450&q=55",
     topic: "Zero-Trust Cloud Defense",
     badge: "Cyber Lab"
   }
