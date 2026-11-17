@@ -248,17 +248,18 @@
     position: fixed;
     top: var(--nav-height);
     right: -100%;
-    width: 82%;
-    max-width: 340px;
+    width: 100% !important;
+    max-width: 100% !important;
     height: calc(100vh - var(--nav-height));
     background-color: #FFFFFF;
-    box-shadow: -8px 0 30px rgba(15, 17, 26, 0.15);
+    box-shadow: none;
     padding: 32px 24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
     transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 999;
+    box-sizing: border-box;
   }
 
   .mobile-drawer.open {
@@ -319,9 +320,9 @@
   }
 
   .mobile-drawer {
-    width: 88%;
-    max-width: 300px;
-    padding: 24px 18px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 20px;
   }
 
   .mobile-nav-item a {
